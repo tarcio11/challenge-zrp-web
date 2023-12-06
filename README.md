@@ -56,6 +56,20 @@ npm run dev
 
 <br />
 
+## **Telas do Projeto**
+
+### **Home**
+
+![Home](./documentation/assets/home.png)
+
+### **Home - Search - Result**
+
+![Home - Search](./documentation/assets/search.png)
+
+### **Home - Search - Not Found**
+
+![Home - Search - Not Found](./documentation/assets/not-found.png)
+
 ### **OBS:**
 
 - Por conta do tempo, não foi possivel componentizar todo o projeto, mas foi feito o possivel para que o código ficasse o mais limpo possivel.
