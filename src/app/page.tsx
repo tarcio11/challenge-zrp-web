@@ -1,5 +1,8 @@
 import Image from "next/image";
-import { FiSearch } from "react-icons/fi";
+
+import { InputSearch } from "@/components/form/input-search";
+import { Header } from "@/components/header";
+import { Stats } from "@/components/stats";
 
 export default function Home() {
   return (
@@ -10,19 +13,7 @@ export default function Home() {
         </h1>
 
         <form className="flex items-center justify-center mt-5">
-          <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
-            Search
-          </label>
-          <div className="w-80 flex items-center justify-center text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
-            <FiSearch className="w-5 h-5 ml-3 text-gray-400" />
-            <input
-              type="search"
-              id="search"
-              className="w-full p-4 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white focus:outline-none rounded-3xl"
-              placeholder="Pesquisar"
-              required
-            />
-          </div>
+          <InputSearch />
         </form>
 
         <div className="flex flex-col justify-center items-center p-2">
@@ -52,33 +43,11 @@ export default function Home() {
 
           <div className="relative overflow-x-auto">
             <div className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-              <header className="text-xs text-gray-900 uppercase dark:text-gray-400">
-                <ul className="flex justify-between border-b border-gray-300 dark:border-gray-700">
-                  <li className="px-6 py-3">About</li>
-                  <li className="px-6 py-3">Stats</li>
-                  <li className="px-6 py-3">Moves</li>
-                  <li className="px-6 py-3">Evolutions</li>
-                </ul>
-              </header>
+              <Header />
 
-              <div className="flex items-center justify-between">
-                <span className="w-20 py-3 text-center">HP</span>
-                <span className="w-14 py-3 text-center">50</span>
-                <div className="flex-1 px-3">
-                  <div className="w-1/3 bg-gray-200 rounded-full h-1 dark:bg-gray-700">
-                    <div className="bg-red-600 h-2 rounded-full dark:bg-red-500"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="w-20 py-3 text-center">Attack</span>
-                <span className="w-14 py-3 text-center">78</span>
-                <div className="flex-1 px-3">
-                  <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
-                    <div className="bg-green-600 h-2 rounded-full dark:bg-green-500"></div>
-                  </div>
-                </div>
-              </div>
+              <Stats name="HP" value={45} />
+              <Stats name="Attack" value={78} />
+
               <div className="flex items-center justify-between">
                 <span className="w-20 py-3 text-center">Abilities</span>
                 <span className="w-14 py-3 text-center">2</span>
