@@ -15,11 +15,11 @@ export const InputSearchBase: ForwardRefRenderFunction<
   InputRootProps
 > = (props: InputRootProps, ref) => {
   return (
-    <div data-error={!!props.error}>
+    <div className="w-full" data-error={!!props.error}>
       <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
         Search
       </label>
-      <div className="w-80 flex items-center justify-center text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+      <div className="w-full flex items-center justify-center text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
         <FiSearch className="w-5 h-5 ml-3 text-gray-400" />
         <input
           ref={ref}
