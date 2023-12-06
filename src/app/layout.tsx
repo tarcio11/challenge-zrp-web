@@ -1,3 +1,4 @@
+import "./globals.css";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -17,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>{children}</body>
+    <html lang="en" className="dark antialiased">
+      <body className={roboto.className}>
+        <div className="w-screen h-screen dark:bg-zinc-950">{children}</div>
+      </body>
     </html>
   );
 }
